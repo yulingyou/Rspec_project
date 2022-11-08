@@ -9,5 +9,7 @@ RSpec.describe "report_length method" do
     result = report_length("Daisy")
     expect(result).to eq "This string was 5 characters long."
   end
-
+  it "should returns no method error" do
+    expect{report_length(6)}.to raise_error(NoMethodError)
+  end
 end
